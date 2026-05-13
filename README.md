@@ -132,10 +132,10 @@ docker-compose up -d
 
 | Service | URL |
 |---------|-----|
-| Node.js App | `http://<SERVER_IP>` |
-| Health Check | `http://<SERVER_IP>/health` |
-| Traefik Dashboard | `http://<SERVER_IP>:8080` |
-| Uptime Kuma | `http://<SERVER_IP>:3001` |
+| Node.js App | `http://54.198.70.202` |
+| Health Check | `http://54.198.70.202/health` |
+| Traefik Dashboard | `http://54.198.70.202:8080` |
+| Uptime Kuma | `http://54.198.70.202:3001` |
 
 ### Health endpoint response:
 ```json
@@ -148,12 +148,12 @@ docker-compose up -d
 
 ## Monitoring Setup
 
-1. Open Uptime Kuma at `http://<SERVER_IP>:3001`
+1. Open Uptime Kuma at `http://54.198.70.202>:3001`
 2. Create admin account
 3. Add monitors:
-   - Node.js App: `http://<SERVER_IP>`
-   - Health Check: `http://<SERVER_IP>/health`
-   - Traefik: `http://<SERVER_IP>:8080`
+   - Node.js App: `http://54.198.70.202`
+   - Health Check: `http://54.198.70.202/health`
+   - Traefik: `http://54.198.70.202:8080`
 4. Configure Telegram notification:
    - Settings → Notifications → Add
    - Type: Telegram
