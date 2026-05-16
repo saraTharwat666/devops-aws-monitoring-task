@@ -2,7 +2,7 @@ services:
   app:
     build: ./app
     container_name: devops-app
-    restart: always
+    restart: unless-stopped
     expose:
       - "3000"
     labels:
@@ -15,7 +15,7 @@ services:
   traefik:
     image: traefik:v2.11
     container_name: traefik
-    restart: always
+    restart: unless-stopped
     environment:
       - DOCKER_API_VERSION=1.41
     command:
@@ -34,7 +34,7 @@ services:
   uptime-kuma:
     image: louislam/uptime-kuma:latest
     container_name: uptime-kuma
-    restart: always
+    restart: unless-stopped
     ports:
       - "3001:3001"
     volumes:
