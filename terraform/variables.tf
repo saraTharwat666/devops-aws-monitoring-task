@@ -9,3 +9,8 @@ variable "instance_type" {
 variable "key_name" {
   default = "devops-key"
 }
+
+variable "ami_id" {
+  type        = string
+  default     = "ami-0c55b159cbfafe1f0" #  Amazon Linux
+}
